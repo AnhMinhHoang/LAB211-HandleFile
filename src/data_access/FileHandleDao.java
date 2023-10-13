@@ -52,7 +52,7 @@ public class FileHandleDao {
         System.out.printf("%-20s%-20s%s\n", "Name",
                 "Address", "Money");
         for (FileData d : data) {
-            if (d.getMoney() > salary) {
+            if (d.getMoney() >= salary) {
                 count++;
                 System.out.println(display(d));
                 if (dmax < d.getMoney()) {
