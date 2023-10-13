@@ -69,7 +69,8 @@ public class FileData {
                 double a;
                 try {
                     a = Double.parseDouble(line[2]);
-                    new_data.setMoney(a);
+                    if(a < 0) new_data.setMoney(0);
+                    else new_data.setMoney(a);
                     data.add(new_data);
                 } catch (NumberFormatException e) {
                     System.out.println("Wrong nnumber format");
